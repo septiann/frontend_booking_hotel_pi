@@ -7,6 +7,10 @@
   list-style: none;
   // background-color: $breadcrumb-bg;
   @include border-radius($breadcrumb-border-radius);
+
+  ol {
+    margin-left: 0px;
+  }
 }
 
 .breadcrumb-item {
