@@ -8,7 +8,7 @@ import './index.scss'
 export default function Breadcrumb(props) {
     return (
         <nav aria-label="breadcrumb">
-            <ol className="breadcrumb">
+            <ol className={["breadcrumb", props.className].join(" ")}>
                 {props.data.map((item, index) => {
                     return (
                         <li key={`breadcrumb-${index}`} className={`breadcrumb-item${index === props.data.length - 1 ? " active" : ""}`}>
