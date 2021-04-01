@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 
 import propTypes from 'prop-types'
 
+export { default as Numbering } from "./Numbering"
+export { default as Meta } from "./Meta"
+export { default as MainContent } from "./MainContent"
+export { default as Controller } from "./Controller"
+
 export default function Stepper(props) {
     const { steps, initialStep } = props
     const stepsKeys = Object.keys(steps)
@@ -17,7 +22,7 @@ export default function Stepper(props) {
     }
 
     function nextStep() {
-        if(+indexStep < totalStep) setCurrentStep(stepKeys[indexStep + 1])
+        if(+indexStep < totalStep) setCurrentStep(stepsKeys[indexStep + 1])
     }
 
     return <>{props.children(prevStep, nextStep, CurrentStep, steps)}</>
