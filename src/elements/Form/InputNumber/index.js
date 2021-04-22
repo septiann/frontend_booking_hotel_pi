@@ -40,8 +40,6 @@ export default function Number(props) {
         })
     }
 
-    console.log(value)
-
     return (
         <div className={["input-number mb-3", props.outerClassName].join("")}>
             <div className="input-group">
