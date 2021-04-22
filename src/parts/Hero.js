@@ -35,11 +35,11 @@ export default function Hero(props) {
 
                         <div className="row" style={{ marginTop: 80 }}>
                             <div className="col-auto" style={{ marginRight: 35}}>
-                                <img width="36" height="36" src={IconTraveler} alt={`${props.data.travelers} travelers`}/>
+                                <img width="36" height="36" src={IconTraveler} alt={`${props.data.travellers} travelers`}/>
                                 <h6 className="mt-3">
-                                    {formatNumber(props.data.travelers)}{" "}
+                                    {formatNumber(props.data.travellers)}{" "}
                                     <span className="text-gray-500 font-weight-light">
-                                        travelers
+                                        travellers
                                     </span>
                                 </h6>
                             </div>
