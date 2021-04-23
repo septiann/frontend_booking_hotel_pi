@@ -41,33 +41,35 @@ class Checkout extends Component {
 
     render() {
         const { data } = this.state
-        const { checkout } = this.props
+        const { checkout, page } = this.props
 
         if(!checkout)
-        return <div className="container">
-            <div className="row align-items-center justify-content-center text-center" style={{ height: "100vh" }}>
-                <div className="col-3">
-                    Choose your room and set duration before
-                    <div>
-                        <Button className="btn mt-5" type="link" href="/" isLight>Back</Button>
+        return (
+            <div className="container">
+                <div className="row align-items-center justify-content-center text-center" style={{ height: "100vh" }}>
+                    <div className="col-3">
+                        Silahkan pilih kamar dan atur durasi terlebih dahulu!
+                        <div>
+                            <Button className="btn mt-5" type="button" onClick={() => this.props.history.goBack()} isLight>Back</Button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        )
 
         const steps = {
             bookingInformation: {
                 title: "Booking Information",
                 description: "Please fill up the blank fields below",
                 content: (
-                    <BookingInformation data={data} checkout={checkout} ItemDetails={ItemDetails} onChange={this.onChange} />
+                    <BookingInformation data={data} checkout={checkout} ItemDetails={page[checkout._id]} onChange={this.onChange} />
                 )
             },
             payment: {
                 title: "Payment",
                 description: "Kindly follow the instructions below",
                 content: (
-                    <Payment data={data} ItemDetails={ItemDetails} checkout={checkout} onChange={this.onChange} />
+                    <Payment data={data} ItemDetails={page[checkout._id]} checkout={checkout} onChange={this.onChange} />
                 )
             },
             completed: {
@@ -98,7 +100,7 @@ class Checkout extends Component {
                                                 </Button>
                                             </Fade>
                                         )}
-                                        <Button className="btn" type="link" isBlock isLight href={`/properties/${ItemDetails._id}`}>
+                                        <Button className="btn" type="button" isBlock isLight onClick={() => this.props.history.goBack()}>
                                             Cancel
                                         </Button>
                                     </Controller>
@@ -136,7 +138,8 @@ class Checkout extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    checkout: state.checkout
+    checkout: state.checkout,
+    page: state.page
 })
 
 export default connect(mapStateToProps)(Checkout)

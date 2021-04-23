@@ -16,12 +16,12 @@ export default function BookingInformation(props) {
                         <Fade delay={300}>
                             <div className="card">
                                 <figure className="img-wrapper" style={{ height: 270 }}>
-                                    <img className="img-cover" src={ItemDetails.imageUrls[0].url} alt={ItemDetails.name} />
+                                    <img className="img-cover" src={`${process.env.REACT_APP_HOST}/${ItemDetails.image_id[0].image_url}`} alt={ItemDetails.title} />
                                 </figure>
                                 <div className="row align-items-center">
                                     <div className="col">
                                         <div className="meta-wrapper">
-                                            <h5>{ItemDetails.name}</h5>
+                                            <h5>{ItemDetails.title}</h5>
                                             <span className="text-gray-500">
                                                 {ItemDetails.city}, {ItemDetails.country}
                                             </span>

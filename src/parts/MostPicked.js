@@ -20,11 +20,11 @@ export default function MostPicked(props) {
                                             <span className="font-weight-light"> / {item.unit}</span>
                                         </div>
                                         <figure className="img-wrapper">
-                                            <img src={item.image_id[2] ? `${process.env.REACT_APP_HOST}/${item.image_id[2].image_url}` : ""} alt={item.name} className="img-cover" />
+                                            <img src={item.image_id[2] ? `${process.env.REACT_APP_HOST}/${item.image_id[2].image_url}` : ""} alt={item.title} className="img-cover" />
                                         </figure>
                                         <div className="meta-wrapper">
                                             <Button type="link" className="stretched-link d-block text-white" href={`properties/${item._id}`}>
-                                                <h5>{item.name}</h5>
+                                                <h5>{item.title}</h5>
                                             </Button>
                                             <span>
                                                 {item.city}, {item.country}
