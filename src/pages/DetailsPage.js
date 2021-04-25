@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
 import { connect } from "react-redux"
+import { Helmet } from 'react-helmet'
 
 import Header from 'parts/Header'
 import PageDetailTitle from 'parts/PageDetailTitle'
@@ -35,6 +36,9 @@ class DetailsPage extends Component {
 
         return (
             <>
+                <Helmet>
+                    <title>{page[match.params.id].title}</title>
+                </Helmet>
                 <Header {...this.props} />
                 <PageDetailTitle breadcrumb={breadcrumb} data={page[match.params.id]} />
                 <FeaturedImage data={page[match.params.id].image_id} />

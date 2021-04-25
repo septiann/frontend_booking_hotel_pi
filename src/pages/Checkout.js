@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
 import { connect } from "react-redux"
+import { Helmet } from 'react-helmet'
 
 import Header from 'parts/Header'
 
@@ -104,6 +105,9 @@ class Checkout extends Component {
 
         return (
             <>
+                <Helmet>
+                    <title>Checkout</title>
+                </Helmet>
                 <Header isCentered />   
 
                 <Stepper steps={steps}>

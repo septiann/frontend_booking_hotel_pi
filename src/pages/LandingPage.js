@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Helmet } from 'react-helmet'
 
 import Header from 'parts/Header'
 import Hero from 'parts/Hero'
@@ -31,6 +32,9 @@ class LandingPage extends Component {
 
         return (
             <>
+                <Helmet>
+                    <title>Home</title>
+                </Helmet>
                 <Header {...this.props}></Header>
                 <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero} />
                 <MostPicked refMostPicked={this.refMostPicked} data={page.landingPage.mostPicked} />
