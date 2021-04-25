@@ -32,7 +32,7 @@ export default function BookingInformation(props) {
                                             Rp. {FormatNumber(+checkout.duration * ItemDetails.price)}
                                             <span className="text-gray-500"> per </span>
                                             {checkout.duration} {ItemDetails.unit}
-                                            {+checkout.duration > 1 ? "s" : ""}
+                                            {+checkout.duration > 1 ? "" : ""}
                                         </span>
                                     </div>
                                 </div>

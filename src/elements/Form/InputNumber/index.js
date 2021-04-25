@@ -48,7 +48,7 @@ export default function Number(props) {
                         -
                     </span>
                 </div>
-                <input min={min} max={max} name={name} className="form-control" placeholder={placeholder ? placeholder : "0"} value={`${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? "s" : ""}`} onChange={onChange} />
+                <input min={min} max={max} name={name} className="form-control" placeholder={placeholder ? placeholder : "0"} value={`${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? "" : ""}`} onChange={onChange} />
                 <div className="input-group-append">
                     <span className="input-group-text plus" onClick={plus}>
                         +
