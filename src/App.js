@@ -9,8 +9,25 @@ import Example from 'pages/Example'
 
 import 'assets/scss/style.scss'
 
-function App() {
-  return <div className="App">
+class App extends React.Component {
+  authenticate() {
+    return new Promise(resolve => setTimeout(resolve, 5000))
+  }
+
+  componentDidMount() {
+    this.authenticate().then(() => {
+      const ale = document.getElementById('ipl-progress-indicator')
+      if(ale) {
+        ale.classList.add('available')
+        setTimeout(() => {
+          ale.outerHTML = ''
+        }, 5000)
+      } 
+    })
+  }
+
+  render() {
+    return <div className="App">
       <Router>
         <Route exact path="/" component={LandingPage}></Route>
         <Route exact path="/properties/:id" component={DetailsPage}></Route>
@@ -19,7 +36,8 @@ function App() {
       </Router>
 
       <ToastContainer></ToastContainer>
-  </div>
+    </div>
+  }
 }
 
 export default App
