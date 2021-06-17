@@ -26,11 +26,11 @@ export default function Testimony({ data }) {
                             {data.content}
                         </h5>
                         <span className="text-gray-500">
-                            {data.familyName}, {data.familyOccupation}
+                            {data.family_name}, {data.family_occupation}
                         </span>
                         <div>
                             <Button className="btn px-5" style={{ marginTop: 40 }} hasShadow isPrimary type="link" href={`/testimonial/${data._id}`}>
-                                Read Their Story
+                                Baca Cerita Mereka
                             </Button>
                         </div>
                     </div>

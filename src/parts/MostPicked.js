@@ -5,6 +5,8 @@ import formatNumber from 'utils/formatNumber'
 import Button from 'elements/Button'
 
 export default function MostPicked(props) {
+    if(props.data.length === 0) return null
+    
     return (
         <section className="container" ref={props.refMostPicked}>
             <Fade bottom>

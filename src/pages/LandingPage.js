@@ -18,7 +18,7 @@ class LandingPage extends Component {
     }
 
     componentDidMount() {
-        window.title = "InnCation | Home"
+        window.title = "InnCation | Beranda"
         window.scrollTo(0, 0)
 
         if(!this.props.page.landingPage)
@@ -33,7 +33,7 @@ class LandingPage extends Component {
         return (
             <>
                 <Helmet>
-                    <title>Home</title>
+                    <title>Beranda</title>
                 </Helmet>
                 <Header {...this.props}></Header>
                 <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero} />

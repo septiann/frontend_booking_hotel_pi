@@ -7,50 +7,50 @@ export default function Footer() {
         <footer>
             <div className="container">
                 <div className="row">
-                    <div className="col-auto" style={{ width: 350 }}>
+                    <div className="col-3 mr-5" style={{ width: 350 }}>
                         <IconText />
                         <p className="brand-tagline">
-                            We kaboom your beauty holiday instantly and memorable.
+                            Semua yang seru dan menyenangkan dari liburan, lebih mudah dan lebih murah.
                         </p>
                     </div>
-                    <div className="col-auto mr-5">
-                        <h6 className="mt-2">For Beginners</h6>
+                    <div className="col-2 mr-5">
+                        <h6 className="mt-2 font-weight-bold">Bantuan dan Lainnya</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="link" href="/register">New Account</Button>
+                                <Button type="link" href="/payment-confirmation">Konfirmasi Pembayaran</Button>
                             </li>
                         </ul>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="link" href="/properties">Start Booking a Room</Button>
+                                <Button type="link" href="/properties">Mulai Pesan</Button>
                             </li>
                         </ul>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="link" href="/use-payments">Use Payments</Button>
+                                <Button type="link" href="/use-payments">Pembayaran Kami</Button>
                             </li>
                         </ul>
                     </div>
                     <div className="col-2 mr-5">
-                        <h6 className="mt-2">Explore Us</h6>
+                        <h6 className="mt-2 font-weight-bold">Tentang InnCation</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="link" href="/career">Our Careers</Button>
+                                <Button type="link" href="/career">Karir</Button>
                             </li>
                         </ul>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="link" href="/privacy">Privacy</Button>
+                                <Button type="link" href="/privacy">Privasi</Button>
                             </li>
                         </ul>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="link" href="/terms-conditions">Terms & Conditions</Button>
+                                <Button type="link" href="/terms-conditions">Syarat & Ketentuan</Button>
                             </li>
                         </ul>
                     </div>
                     <div className="col-3">
-                        <h6 className="mt-2">Connect Us</h6>
+                        <h6 className="mt-2 font-weight-bold">Hubungi Kami</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
                                 <Button isExternal type="link" href="mailto:support@inncation.id">support@inncation.id</Button>
@@ -63,14 +63,14 @@ export default function Footer() {
                         </ul>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <span>Inncation, Cilandak Barat, Jakarta Selatan</span>
+                                <span>InnCation Office, Tugu, Cimanggis, Depok</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col text-center copyrights">
-                        Copyright 2021 - All rights reserved - Inncation
+                        Copyright { new Date().getFullYear() } - All rights reserved - InnCation
                     </div>
                 </div>
             </div>
