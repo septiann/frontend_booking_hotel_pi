@@ -81,11 +81,11 @@ class BookingForm extends Component {
     
     render() {
         const { data } = this.state
-        const { itemDetails, startBooking } = this.props
+        const { itemDetails } = this.props
 
         return (
             <div className="card bordered" style={{ padding: '60px 80px' }}>
-                <h4 className="mb-3">Start Booking</h4>
+                <h4 className="mb-3">Mulai Pemesanan</h4>
                 <h5 className="h2 text-teal mb-4">
                     Rp. {FormatNumber(itemDetails.price)}{" "}
                     <span className="text-gray-500 font-weight-light">
@@ -93,14 +93,14 @@ class BookingForm extends Component {
                     </span>
                 </h5>
 
-                <label htmlFor="duration">How long you will stay?</label>
-                <InputNumber max={30} suffix={" night"} isSuffixPlural onChange={this.updateData} name="duration" value={data.duration} />
+                <label htmlFor="duration">Pilih durasi menginap:</label>
+                <InputNumber max={30} suffix={" malam"} isSuffixPlural onChange={this.updateData} name="duration" value={data.duration} />
 
-                <label htmlFor="date">Pick a date</label>
+                <label htmlFor="date">Pilih tanggal:</label>
                 <InputDate onChange={this.updateData} name="date" value={data.date} />
 
                 <h6 className="text-gray-500 font-weight-light" style={{ marginBottom: 40 }}>
-                    You will pay{" "}
+                    Kamu akan membayar{" "}
                     <span className="text-gray-900">
                         Rp. {FormatNumber(itemDetails.price * data.duration)}
                     </span>{" "}
@@ -110,7 +110,7 @@ class BookingForm extends Component {
                     </span>
                 </h6>
 
-                <Button className="btn" hasShadow isPrimary isBlock onClick={this.startBooking}>Continue to Book</Button>
+                <Button className="btn" hasShadow isPrimary isBlock onClick={this.startBooking}>Lanjutkan pemesanan</Button>
             </div>
         )
     }

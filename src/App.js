@@ -11,7 +11,7 @@ import 'assets/scss/style.scss'
 
 class App extends React.Component {
   authenticate() {
-    return new Promise(resolve => setTimeout(resolve, 5000))
+    return new Promise(resolve => setTimeout(resolve, 10000))
   }
 
   componentDidMount() {
@@ -21,7 +21,7 @@ class App extends React.Component {
         ale.classList.add('available')
         setTimeout(() => {
           ale.outerHTML = ''
-        }, 5000)
+        }, 10000)
       } 
     })
   }

@@ -74,7 +74,7 @@ class Checkout extends Component {
                     <div className="col-6">
                         Silahkan pilih kamar dan atur durasi terlebih dahulu!
                         <div>
-                            <Button className="btn mt-5" type="button" onClick={() => this.props.history.goBack()} isLight>Back</Button>
+                            <Button className="btn mt-5" type="button" onClick={() => this.props.history.goBack()} isLight>Kembali</Button>
                         </div>
                     </div>
                 </div>
@@ -83,21 +83,21 @@ class Checkout extends Component {
 
         const steps = {
             bookingInformation: {
-                title: "Booking Information",
-                description: "Please fill up the blank fields below",
+                title: "Informasi Pemesanan",
+                description: "Silahkan isi data diri Anda di bawah.",
                 content: (
                     <BookingInformation data={data} checkout={checkout} ItemDetails={page[checkout._id]} onChange={this.onChange} />
                 )
             },
             payment: {
-                title: "Payment",
-                description: "Kindly follow the instructions below",
+                title: "Pembayaran",
+                description: "Ikuti instruksi pembayaran di bawah ini.",
                 content: (
                     <Payment data={data} ItemDetails={page[checkout._id]} checkout={checkout} onChange={this.onChange} />
                 )
             },
             completed: {
-                title: "Yay! Completed",
+                title: "Konfirmasi Berhasil",
                 description: null,
                 content: <Completed />
             }
@@ -123,12 +123,12 @@ class Checkout extends Component {
                                         {data.firstName !== "" && data.lastName !== "" && data.email !== "" && data.phone !== "" && (
                                             <Fade>
                                                 <Button className="btn mb-3" type="button" isBlock isPrimary hasShadow onClick={nextStep}>
-                                                    Continue to Book
+                                                    Lanjutkan
                                                 </Button>
                                             </Fade>
                                         )}
-                                        <Button className="btn" type="button" isBlock isLight onClick={() => this.props.history.goBack()}>
-                                            Cancel
+                                        <Button className="btn" type="button" isBlock isLight hasShadow onClick={() => this.props.history.goBack()}>
+                                            Batal
                                         </Button>
                                     </Controller>
                                 )}
@@ -138,20 +138,20 @@ class Checkout extends Component {
                                         {data.proofPayment !== "" && data.bankName !== "" && data.bankHolder !== "" && (
                                             <Fade>
                                                 <Button className="btn mb-3" type="button" isBlock isPrimary hasShadow onClick={() => this._Submit(nextStep)}>
-                                                    Continue to Book
+                                                    Pesan
                                                 </Button>
                                             </Fade>
                                         )}
-                                        <Button className="btn" type="button" isBlock isLight onClick={prevStep}>
-                                            Cancel
+                                        <Button className="btn" type="button" isBlock isLight hasShadow onClick={prevStep}>
+                                            Batal
                                         </Button>
                                     </Controller>
                                 )}
 
                                 {CurrentStep === "completed" && (
                                     <Controller>
-                                        <Button className="btn" type="link" isBlock isPrimary hasShadow href="">
-                                            Back to Home
+                                        <Button className="btn" type="button" isBlock isPrimary hasShadow onClick={event => window.location.href="/"}>
+                                            Kembali ke Halaman Utama
                                         </Button>
                                     </Controller>
                                 )}

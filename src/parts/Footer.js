@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="row">
                     <div className="col-3 mr-5" style={{ width: 350 }}>
                         <IconText />
-                        <p className="brand-tagline">
+                        <p className="brand-tagline" style={{ fontSize: '14px' }}>
                             Semua yang seru dan menyenangkan dari liburan, lebih mudah dan lebih murah.
                         </p>
                     </div>

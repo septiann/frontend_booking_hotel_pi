@@ -10,7 +10,7 @@ export default function Completed() {
                     <div className="col-4">
                         <img src={CompletedIllustration} className="img-fluid" alt="completed checkout apartment" />
                         <p className="text-gray-500">
-                            We will inform you via email later once the transaction has been accepted.
+                            Terima kasih telah melakukan pemesanan. Tim kami akan segera melakukan validasi pembayaran dan akan segera menghubungi Anda.
                         </p>
                     </div>
                 </div>
