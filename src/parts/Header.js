@@ -4,6 +4,8 @@ import Fade from 'react-reveal/Fade'
 import Button from 'elements/Button'
 import BrandIcon from 'parts/IconText'
 
+import MenuMobile from 'parts/MenuMobile'
+
 export default function Header(props) {
     const getNavLinkClass = path => {
         return props.location.pathname === path ? " active" : "";
@@ -30,7 +32,11 @@ export default function Header(props) {
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light">
                         <BrandIcon />
-                        <div className="collapse navbar-collapse">
+                        {/* <button class="navbar-toggler" onClick={handleToggle} type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> */}
+                        <MenuMobile />
+                        <div className="collapse navbar-collapse" id="navbarToggler">
                             <ul className="navbar-nav ml-auto">
                                 <li className={`nav-item${getNavLinkClass("/")}`}>
                                     <Button className="nav-link" type="link" href="/">
