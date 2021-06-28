@@ -43,16 +43,19 @@ export default function Header(props) {
                                         Beranda
                                     </Button>
                                 </li>
+                                <div className="res-divider"></div>
                                 <li className={`nav-item${getNavLinkClass("/browse-by")}`}>
                                     <Button className="nav-link" type="link" href="/browse-by">
                                         Telusuri
                                     </Button>
                                 </li>
+                                <div className="res-divider"></div>
                                 <li className={`nav-item${getNavLinkClass("/stories")}`}>
                                     <Button className="nav-link" type="link" href="/stories">
                                         Testimonial
                                     </Button>
                                 </li>
+                                <div className="res-divider"></div>
                                 <li className={`nav-item${getNavLinkClass("/promo")}`}>
                                     <Button className="nav-link" type="link" href="/promo">
                                         Promo

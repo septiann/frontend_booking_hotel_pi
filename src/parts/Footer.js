@@ -13,6 +13,7 @@ export default function Footer() {
                             Semua yang seru dan menyenangkan dari liburan, lebih mudah dan lebih murah.
                         </p>
                     </div>
+                    <div className="res-divider"></div>
                     <div className="col-2 mr-5 res-mw-100">
                         <h6 className="mt-2 font-weight-bold">Bantuan dan Lainnya</h6>
                         <ul className="list-group list-group-flush">
@@ -31,6 +32,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
+                    <div className="res-divider"></div>
                     <div className="col-2 mr-5 res-mw-100">
                         <h6 className="mt-2 font-weight-bold">Tentang InnCation</h6>
                         <ul className="list-group list-group-flush">
@@ -49,6 +51,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
+                    <div className="res-divider"></div>
                     <div className="col-3 res-mw-100">
                         <h6 className="mt-2 font-weight-bold">Hubungi Kami</h6>
                         <ul className="list-group list-group-flush">
@@ -68,6 +71,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
+                <div className="res-divider"></div>
                 <div className="row">
                     <div className="col text-center copyrights">
                         Copyright { new Date().getFullYear() } - All rights reserved - InnCation
