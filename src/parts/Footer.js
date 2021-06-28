@@ -5,15 +5,15 @@ import IconText from 'parts/IconText'
 export default function Footer() {
     return (
         <footer>
-            <div className="container">
-                <div className="row">
-                    <div className="col-3 mr-5" style={{ width: 350 }}>
+            <div className="container res-container">
+                <div className="row res-footer">
+                    <div className="col-3 mr-5 res-mw-100" style={{ width: 350 }}>
                         <IconText />
                         <p className="brand-tagline" style={{ fontSize: '14px' }}>
                             Semua yang seru dan menyenangkan dari liburan, lebih mudah dan lebih murah.
                         </p>
                     </div>
-                    <div className="col-2 mr-5">
+                    <div className="col-2 mr-5 res-mw-100">
                         <h6 className="mt-2 font-weight-bold">Bantuan dan Lainnya</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
@@ -31,7 +31,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-2 mr-5">
+                    <div className="col-2 mr-5 res-mw-100">
                         <h6 className="mt-2 font-weight-bold">Tentang InnCation</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
@@ -49,7 +49,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-3">
+                    <div className="col-3 res-mw-100">
                         <h6 className="mt-2 font-weight-bold">Hubungi Kami</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">

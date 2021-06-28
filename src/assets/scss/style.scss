@@ -286,7 +286,13 @@ main {
             cursor: pointer;
         }
     }
+
+    .photo-hide {
+        display: none;
+    }
     
+    // Header
+
     header {
         z-index: 1;
     }
@@ -296,11 +302,11 @@ main {
         width: 100%;
         left: 0;
         top: 80px;
-        background-color: $gray-200;
-        border-radius: 0px 0px 15px 15px;
+        background-color: $primary;
+        border-radius: 0px 0px 4px 4px;
         -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        box-shadow: 5px 10px 18px #888888;
+        box-shadow: 0px 8px 15px rgba($primary, 0.3);
     }
 
     @-webkit-keyframes slide-bottom {
@@ -332,6 +338,102 @@ main {
     
     .fa, .fas {
         font-size: 1.675rem;
+    }
+
+    header {
+        .navbar {
+            ul.navbar-nav {
+                li.nav-item {
+                    &.active {
+                        a.nav-link {
+                            color: $white;
+                            font-weight: bolder;
+                        }
+                    }
+                    a {
+                        &.nav-link {
+                            letter-spacing: 1px;
+                            color: $gray-500;
+                            padding: 0 1.5rem 0 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Section
+    .pt-4 {
+        padding-top: 0 !important;
+    }
+
+    .pr-5 {
+        padding: 0 30px !important;
+    }
+
+    h1, .h1 {
+        line-height: 50px;
+    }
+
+    .res-icon {
+        margin-top: 30px !important;
+        display: inline-block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+
+        .res-icon-2 {
+            margin-right: 0 !important;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    }
+
+    // Container
+    .res-container {
+        padding: 0 30px !important;
+    }
+
+    .container-grid {
+        grid-template-columns: none;
+    }
+
+    // Testimonial
+    .res-testi-title {
+        margin-bottom: 20px !important;
+    }
+
+    h5.h2 {
+        font-size: large;
+    }
+
+    .res-button-testi {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    // Footer
+    footer {
+        padding-top: 0px !important;
+    }
+
+    .res-footer {
+        display: inline-block;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        max-width: 100%;
+    }
+
+    .res-mw-100 {
+        max-width: 100% !important;
+        margin-top: 40px;
+
+        ul {
+            line-height: unset;
+            text-align: left;
+        }
     }
 
 }
