@@ -8,9 +8,9 @@ export default function MostPicked(props) {
     if(props.data.length === 0) return null
     
     return (
-        <section className="container" ref={props.refMostPicked}>
+        <section className="container res-container" ref={props.refMostPicked}>
             <Fade bottom>
-                <h4 className="mb-3">Most Picked</h4>
+                <h4 className="mb-3 font-weight-bolder">Most Picked</h4>
                 <div className="container-grid">
                     {props.data.map((item, index) => {
                         return (

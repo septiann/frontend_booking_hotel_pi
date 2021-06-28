@@ -8,9 +8,9 @@ export default function Categories({ data }) {
         if(category.item_id.length === 0) return null
         
         return (
-            <section className="container" key={`category-${index1}`}>
+            <section className="container res-container" key={`category-${index1}`}>
                 <Fade bottom>
-                    <h4 className="mb-3 font-weight-medium">
+                    <h4 className="mb-3 font-weight-bolder">
                         {category.name}
                     </h4>
                     <div className="container-grid">

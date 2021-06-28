@@ -33,8 +33,8 @@ export default function Hero(props) {
                             Temukan Hotel Staycation Kamu
                         </Button>
 
-                        <div className="row" style={{ marginTop: 80 }}>
-                            <div className="col-auto" style={{ marginRight: 35}}>
+                        <div className="row res-icon" style={{ marginTop: 80 }}>
+                            <div className="col-auto res-icon-2" style={{ marginRight: 35}}>
                                 <img width="36" height="36" src={IconTraveler} alt={`${props.data.travellers} travelers`}/>
                                 <h6 className="mt-3">
                                     {formatNumber(props.data.travellers)}{" "}
@@ -43,7 +43,7 @@ export default function Hero(props) {
                                     </span>
                                 </h6>
                             </div>
-                            <div className="col-auto" style={{ marginRight: 35}}>
+                            <div className="col-auto res-icon-2" style={{ marginRight: 35}}>
                                 <img width="36" height="36" src={IconTreasure} alt={`${props.data.treasures} treasures`}/>
                                 <h6 className="mt-3">
                                     {formatNumber(props.data.treasures)}{" "}
@@ -52,7 +52,7 @@ export default function Hero(props) {
                                     </span>
                                 </h6>
                             </div>
-                            <div className="col-auto">
+                            <div className="col-auto res-icon-2">
                                 <img width="36" height="36" src={IconCities} alt={`${props.data.cities} cities`}/>
                                 <h6 className="mt-3">
                                     {formatNumber(props.data.cities)}{" "}
@@ -64,7 +64,7 @@ export default function Hero(props) {
                         </div>
                     </div>
 
-                    <div className="col-6 pl-5">
+                    <div className="col-6 pl-5 photo-hide">
                         <div style={{ width: 520, height: 410 }}>
                             <img src={ImageHero} alt="Room with couches" className="img-fluid position-absolute" style={{ margin: "-30px 0 0 -30px", zIndex: 1, borderRadius: "100px 15px 15px 15px" }} />
                             <img src={ImageHeroFrame} alt="Room with couches frame" className="img-fluid position-absolute" style={{ margin: "0 -15px -15px 0" }} />
